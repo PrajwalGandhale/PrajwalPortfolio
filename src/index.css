@@ -1,0 +1,40 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+@theme {
+  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  --font-display: "Poppins", sans-serif;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  
+  body {
+    @apply font-sans transition-colors duration-300;
+  }
+
+  img {
+    image-rendering: -webkit-optimize-contrast;
+    image-rendering: auto;
+  }
+}
+
+.glass {
+  @apply bg-white/70 dark:bg-zinc-900/70 backdrop-blur-md border border-white/20 dark:border-zinc-800/50;
+}
+
+.gradient-text {
+  @apply bg-clip-text text-transparent bg-linear-to-r from-emerald-500 to-teal-600;
+}
+
+.section-padding {
+  @apply py-16 px-6 sm:py-20 md:px-12 lg:px-24;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
